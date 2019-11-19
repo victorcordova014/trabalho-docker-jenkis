@@ -1,16 +1,12 @@
 pipeline {
-  agent any
-	options {
-	skipStagesAfterUnstable()
- }
  stages {
-	stage('Git Clone') {
+	stage('Git Pull') {
 		steps {
-			sh 'rm -rf trabalho-docker-jenkins'
-			sh 'git clone https://github.com/lucasrjansen/trabalho-docker-jenkis.git'
+			sh 'docker container stop trabalho-sidnei'
+			sh 'git pull origin master'
 		}
 	}
-	stage('Roda novo Container') {
+	stage('Alterar Container') {
 		steps {
 		sh 'docker run -d --name trabalho-docker-jenkins -p 8888:80 php:7.2-apache'
 		}
