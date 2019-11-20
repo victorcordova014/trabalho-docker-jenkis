@@ -1,19 +1,18 @@
 pipeline {
  stages {
-	stage('Git Pull') {
+	stage('Build') {
 		steps {
-			sh 'docker container stop trabalho-sidnei'
-			sh 'git pull origin master'
+			sh 'docker image build -t trabalho-sidnei/tomcat ./'
 		}
 	}
-	stage('Alterar Container') {
+	stage('Remove') {
 		steps {
-		sh 'docker run -d --name trabalho-docker-jenkins -p 8888:80 php:7.2-apache'
+			sh 'docker container rm -f $(docker container ls -aq)'
 		}
 	}
-	stage('Copia PHP para o container'){
+	stage('Executar') {
 		steps {
-		sh 'docker container cp trabalho-docker-jenkins/* my_php:/var/www/html'
+		sh 'docker container run -d --name trabalho-sidnei --publish 8081:8080 trabalho-sidnei/tomcat'
 		}
 	}
  }
