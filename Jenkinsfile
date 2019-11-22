@@ -1,10 +1,5 @@
 pipeline {
  stages {
-        stage('Build Java') {
-		steps {
-			sh 'cp GerenciaBanco.war /home/lucasjansen/docker/'
-		}
-	}
 	stage('Build Imagem Docker') {
 		steps {
 			sh 'docker image build -t trabalho-sidnei/tomcat ./'
