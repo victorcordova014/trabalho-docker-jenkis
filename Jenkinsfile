@@ -1,6 +1,6 @@
 pipeline {
  stages {
-	stage('Build Imagem Docker') {
+	stage('Build Imagem Docker!') {
 		steps {
 			sh 'docker image build -t trabalho-sidnei/tomcat ./'
 		}
