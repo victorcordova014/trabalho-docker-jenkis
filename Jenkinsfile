@@ -1,11 +1,5 @@
 pipeline {
  stages {
-	 stage('Copy .war') {
-		steps {
-			sh 'git clone https://github.com/lucasrjansen/trabalho-docker-jenkis.git'
-			sh 'cp /dist/GerenciaBanco.war /home/lucasjansen/docker/'
-		}
-	}
 	stage('Build Imagem Docker') {
 		steps {
 			sh 'docker image build -t trabalho-sidnei/tomcat ./'
