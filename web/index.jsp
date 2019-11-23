@@ -8,9 +8,9 @@
     <body>
     <center>
         <h2>
-            <a href="/novo">Adicionar Usuario</a>
+            <a href="novo">Adicionar Usuario</a>
             &nbsp;&nbsp;&nbsp;
-            <a href="/listar">Listar Usuarios</a>
+            <a href="listar">Listar Usuarios</a>
 
         </h2>
     </center>
@@ -30,9 +30,9 @@
                     <td><c:out value="${usuario.email}" /></td>
                     <td><c:out value="${usuario.cidade}" /></td>
                     <td>
-                        <a href="/editar?id=<c:out value='${usuario.usuario_id}' />">Editar</a>
+                        <a href="editar?id=<c:out value='${usuario.usuario_id}' />">Editar</a>
                         &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="/deletar?id=<c:out value='${usuario.usuario_id}' />">Deletar</a>                     
+                        <a href="ddeletar?id=<c:out value='${usuario.usuario_id}' />">Deletar</a>                     
                     </td>
                 </tr>
             </c:forEach>
