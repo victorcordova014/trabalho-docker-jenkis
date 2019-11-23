@@ -4,7 +4,7 @@ pipeline {
 	stage('Build Imagem Docker') {
 		steps {
 			sh 'sudo cp /var/lib/jenkins/workspace/trabalho-sidnei_master/dist/GerenciaBanco.war /home/lucasjansen/docker/'
-			sh 'docker image build -t trabalho-sidnei/tomcat ./'
+			sh 'docker image build -t trabalho-sidnei/tomcat /home/lucasjansen/docker/'
 		}
 	}
 	/*stage('Remove') {
