@@ -16,5 +16,10 @@ pipeline {
 			sh 'docker container run -d --name trabalho-sidnei --publish 8081:8080 trabalho-sidnei/tomcat'
 		}
 	}
+	stage('Remover Workspace') {
+		steps {
+			sh 'rm -f /var/lib/jenkins/workspace/trabalho-sidnei_master/'
+		}
+	}
  }
 }
