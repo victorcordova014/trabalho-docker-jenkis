@@ -1,5 +1,10 @@
 pipeline {
  stages {
+	 stage('Copy War') {
+		steps {
+			sh 'cp /dist/GerenciaBanco.war /home/lucasjansen/docker/'
+		}
+	}
 	stage('Build Imagem Docker') {
 		steps {
 			sh 'docker image build -t trabalho-sidnei/tomcat ./'
