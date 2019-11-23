@@ -6,11 +6,6 @@ pipeline {
 			sh 'docker image build -t trabalho-sidnei/tomcat ./'
 		}
 	}
-	stage('Remover Workspace') {
-		steps {
-			sh 'rm -f /var/lib/jenkins/workspace/trabalho-sidnei_master'
-		}
-	}
 	/*stage('Remove') {
 		steps {
 			//sh 'docker container stop trabalho-sidnei'
@@ -20,6 +15,11 @@ pipeline {
 	stage('Executar') {
 		steps {
 			sh 'docker container run -d --name trabalho-sidnei --publish 8081:8080 trabalho-sidnei/tomcat'
+		}
+	}
+	stage('Remover Workspace') {
+		steps {
+			sh 'sudo rm -f -r /var/lib/jenkins/workspace/trabalho-sidnei_master'
 		}
 	}
  }
