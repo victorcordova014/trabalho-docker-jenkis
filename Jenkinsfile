@@ -18,7 +18,7 @@ pipeline {
 	}
 	stage('Remover Workspace') {
 		steps {
-			sh 'rm -f /var/lib/jenkins/workspace/trabalho-sidnei_master/'
+			sh 'rm -f /var/lib/jenkins/workspace/trabalho-sidnei_master'
 		}
 	}
  }
