@@ -18,9 +18,12 @@ public class ControllerServlet extends HttpServlet {
 
     @Override
     public void init() {
-        String jdbcURL = getServletContext().getInitParameter("jdbcURL");
-        String jdbcUsername = getServletContext().getInitParameter("jdbcUsername");
-        String jdbcPassword = getServletContext().getInitParameter("jdbcPassword");
+        //String jdbcURL = getServletContext().getInitParameter("jdbcURL");
+        //String jdbcUsername = getServletContext().getInitParameter("jdbcUsername");
+        //String jdbcPassword = getServletContext().getInitParameter("jdbcPassword");
+        String jdbcURL = "jdbc:mysql://us-cdbr-iron-east-05.cleardb.net/heroku_b0d7821c0ccfdc8?reconnect=true";
+        String jdbcUsername = "beebb132f4b193";
+        String jdbcPassword = "fcd6cf26";
 
         usuarioDAO = new UsuarioDAO(jdbcURL, jdbcUsername, jdbcPassword);
 

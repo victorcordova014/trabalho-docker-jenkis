@@ -8,9 +8,9 @@
     <body>
     <center>
         <h2>
-            <a href="/novo">Novo Usuario</a>
+            <a href="novo">Novo Usuario</a>
             &nbsp;&nbsp;&nbsp;
-            <a href="/listar">Listar Usuarios</a>
+            <a href="listar">Listar Usuarios</a>
 
         </h2>
     </center>

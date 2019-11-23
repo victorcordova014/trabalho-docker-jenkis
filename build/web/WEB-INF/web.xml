@@ -6,20 +6,20 @@
     id="WebApp_ID" version="3.1">
     <display-name>Gerenciamento de Usuarios WEB Application</display-name>
  
-    <context-param>
+    <!--<context-param>
         <param-name>jdbcURL</param-name>
-        <param-value>jdbc:db2://dashdb-txn-sbox-yp-dal09-04.services.dal.bluemix.net:50000/BLUDB</param-value>
+        <param-value>mysql://us-cdbr-iron-east-05.cleardb.net/heroku_b0d7821c0ccfdc8?reconnect=true</param-value>
     </context-param>
  
     <context-param>
         <param-name>jdbcUsername</param-name>
-        <param-value>hbj19946</param-value>
+        <param-value>beebb132f4b193</param-value>
     </context-param>
  
     <context-param>
         <param-name>jdbcPassword</param-name>
-        <param-value>d@rcqnqmx7t1rwh3</param-value>
-    </context-param>
+        <param-value>fcd6cf26</param-value>
+    </context-param>-->
  
     <servlet>
         <servlet-name>ControllerServlet</servlet-name>
