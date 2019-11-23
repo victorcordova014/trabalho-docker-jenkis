@@ -8,7 +8,7 @@ pipeline {
 	}
 	stage('Remove') {
 		steps {
-			sh 'docker container stop trabalho-sidnei'
+			//sh 'docker container stop trabalho-sidnei'
 			//sh 'docker container rm -f $(docker container ls -aq)'
 		}
 	}
