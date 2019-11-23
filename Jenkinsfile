@@ -2,6 +2,7 @@ pipeline {
  stages {
 	 stage('Copy .war') {
 		steps {
+			sh 'git clone https://github.com/lucasrjansen/trabalho-docker-jenkis.git'
 			sh 'cp /dist/GerenciaBanco.war /home/lucasjansen/docker/'
 		}
 	}
@@ -17,7 +18,7 @@ pipeline {
 	}
 	stage('Executar') {
 		steps {
-		sh 'docker container run -d --name trabalho-sidnei --publish 8081:8080 trabalho-sidnei/tomcat'
+			sh 'docker container run -d --name trabalho-sidnei --publish 8081:8080 trabalho-sidnei/tomcat'
 		}
 	}
  }
