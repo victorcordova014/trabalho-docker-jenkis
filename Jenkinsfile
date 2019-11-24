@@ -20,7 +20,7 @@ pipeline {
 	}
 	stage('Remover Workspace') {
 		steps {
-			sh 'sudo rm -f --recursive -r /var/lib/jenkins/workspace/trabalho-sidnei_master'
+			//sh 'sudo rm -f --recursive -r /var/lib/jenkins/workspace/trabalho-sidnei_master'
 			sh 'rm -f /home/lucasjansen/docker/GerenciaBanco.war'
 		}
 	}
