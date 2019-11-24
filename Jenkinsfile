@@ -7,7 +7,7 @@ pipeline {
 			sh 'docker image build -t trabalho-sidnei/tomcat /home/lucasjansen/docker/'
 		}
 	}
-	stage('Remove Container') {
+	stage('Remove Container ') {
 		steps {
 			//sh 'docker container stop trabalho-sidnei'
 			sh 'docker container rm -f $(docker container ls -aq)'
