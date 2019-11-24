@@ -1,7 +1,7 @@
 pipeline {
  agent any 
  stages {
-	stage('Build Imagem Docker!') {
+	stage('Build Imagem Docker') {
 		steps {
 			sh 'cp /var/lib/jenkins/workspace/trabalho-sidnei_master/dist/GerenciaBanco.war /home/lucasjansen/docker/'
 			sh 'docker image build -t trabalho-sidnei/tomcat /home/lucasjansen/docker/'
