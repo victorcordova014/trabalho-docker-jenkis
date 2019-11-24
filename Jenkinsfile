@@ -18,7 +18,7 @@ pipeline {
 			sh 'docker container run -d --name trabalho-sidnei --publish 8081:8080 trabalho-sidnei/tomcat'
 		}
 	}
-	stage('Remover War pasta Docker ') {
+	stage('Remover War pasta Docker') {
 		steps {
 			//sh 'sudo rm -f --recursive -r /var/lib/jenkins/workspace/trabalho-sidnei_master'
 			sh 'rm -f /home/lucasjansen/docker/GerenciaBanco.war'
