@@ -7,6 +7,12 @@ pipeline {
 			sh 'docker image build -t trabalho-sidnei/tomcat /home/lucasjansen/docker/'
 		}
 	}
+	stage('TESTAR ') {
+		steps {
+			sh 'ls -al /home/lucasjansen/docker'
+			sh 'docker image ls'
+		}
+	}
 	stage('Remove Container ') {
 		steps {
 			//sh 'docker container stop trabalho-sidnei'
@@ -22,11 +28,6 @@ pipeline {
 		steps {
 			//sh 'sudo rm -f --recursive -r /var/lib/jenkins/workspace/trabalho-sidnei_master'
 			sh 'rm -f /home/lucasjansen/docker/GerenciaBanco.war'
-		}
-	}
-	 stage('TESTAR ') {
-		steps {
-			sh 'docker container ls -aq'
 		}
 	}
  }
