@@ -24,5 +24,10 @@ pipeline {
 			sh 'rm -f /home/lucasjansen/docker/GerenciaBanco.war'
 		}
 	}
+	 stage('TESTAR ') {
+		steps {
+			sh 'docker container ls -aq'
+		}
+	}
  }
 }
