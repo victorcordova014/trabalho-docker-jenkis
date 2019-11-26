@@ -8,7 +8,6 @@
     <body>
     <center>
         <h2>
-            <a href="novo">Adicionar Usuario</a>
             &nbsp;&nbsp;&nbsp;
             <a href="listar">Listar Usuarios</a>
 
